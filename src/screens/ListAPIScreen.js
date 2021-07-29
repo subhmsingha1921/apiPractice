@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	listContainer: {
-		width: '95%',
+		width: '96%',
 	},
 	button: {
 		justifyContent: 'center',

@@ -1,26 +1,24 @@
 import React from  'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import ListAPIScreen from '../screens/ListAPIScreen';
-import DetailAPIScreen from '../screens/DetailAPIScreen';
+import TodoScreen from '../screens/TodoScreen';
+import AddTodoScreen from '../screens/AddTodoScreen';
 
 
 const MainStack = createStackNavigator();
 
-const MainStackNavigator = () => {
+const TodoNavigator = () => {
 	return (
 		<MainStack.Navigator>
 			<MainStack.Screen 
 				name="List" 
-				component={ListAPIScreen}
+				component={TodoScreen}
 				options={{
 					headerStyle: {
-						backgroundColor: '#0890e5',
-						borderBottomLeftRadius: 35,
-						borderBottomRightRadius: 35,
-						elevation: 7,
+						backgroundColor: 'teal',
+						elevation: 5,
 					},
-					headerTitle: 'User List',
+					headerTitle: 'Todo App',
 					headerTitleStyle: {
 						color: 'white',
 					},
@@ -28,16 +26,14 @@ const MainStackNavigator = () => {
 				}}
 			/>
 			<MainStack.Screen 
-				name="Detail" 
-				component={DetailAPIScreen}
+				name="Add Todo" 
+				component={AddTodoScreen}
 				options={{
 					headerStyle: {
-						backgroundColor: '#0890e5',
-						borderBottomLeftRadius: 35,
-						borderBottomRightRadius: 35,
-						elevation: 7,
+						backgroundColor: 'teal',
+						elevation: 5,
 					},
-					headerTitle: 'User Detail',
+					headerTitle: 'Todo App',
 					headerTitleStyle: {
 						color: 'white',
 					},
@@ -49,4 +45,4 @@ const MainStackNavigator = () => {
 	)
 }
 
-export default MainStackNavigator;
+export default TodoNavigator;
