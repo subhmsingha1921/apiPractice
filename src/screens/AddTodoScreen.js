@@ -23,7 +23,7 @@ const AddTodoScreen = (props) => {
 			task: task,
 			status: status,
 		})
-		.then(() => alert('Todo successfully created.'));
+		.then(() => alert('Task successfully created.'));
 		setTask('');
 		props.navigation.navigate('List');
 	}

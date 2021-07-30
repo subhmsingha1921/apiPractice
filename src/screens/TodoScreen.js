@@ -28,7 +28,14 @@ const TodoScreen = (props) => {
 	const TodoItem = (props) => {
 		return (
 			<View style={styles.todo}>
-				<Text style={[styles.todoText, {textDecorationLine: props.item.status ? 'line-through': null}]}>{props.item.task}</Text>
+				<TouchableOpacity onPress={() => {
+					database()
+					.ref(`/todos/${props.item.id}`)
+					.remove()
+					.then(() => alert(`${props.item.task} has been deleted.`))
+				}}>
+					<Text style={[styles.todoText, {textDecorationLine: props.item.status ? 'line-through': null}]}>{props.item.task}</Text>
+				</TouchableOpacity>
 				<TouchableOpacity onPress={() => {
 					database()
 					.ref(`/todos/${props.item.id}`)
